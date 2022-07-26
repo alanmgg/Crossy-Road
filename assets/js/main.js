@@ -1,3 +1,22 @@
+let sound = new Audio('assets/WhatsUp.mp3');
+
+async function playSound() {
+  try {
+    await sound.play();
+    sound.loop = true;
+    sound.controls = true;
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+function resetSound() {
+  sound.pause();
+  sound.currentTime = 0;
+}
+
+playSound();
+
 const counterDOM = document.getElementById('counter');  
 const endDOM = document.getElementById('end');  
 
@@ -421,6 +440,7 @@ function Lane(index) {
 document.querySelector("#retry").addEventListener("click", () => {
   lanes.forEach(lane => scene.remove( lane.mesh ));
   initaliseValues();
+  playSound();
   endDOM.style.visibility = 'hidden';
 });
 
@@ -587,6 +607,7 @@ function animate(timestamp) {
       const carMinX = vechicle.position.x - vechicleLength*zoom/2;
       const carMaxX = vechicle.position.x + vechicleLength*zoom/2;
       if(chickenMaxX > carMinX && chickenMinX < carMaxX) {
+        resetSound();
         endDOM.style.visibility = 'visible';
       }
     });
