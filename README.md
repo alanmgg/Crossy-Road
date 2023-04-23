@@ -5,10 +5,10 @@
 
   <p align="center">
     Se configuro una escena Three.js con objetos de caja, se agregaron luces, cámara, animaciones y controladores de eventos. También se agregaron texturas con HTML Canvas y se dibujo formas 2D en Three.js URL / Demo: 
-    <a href="http://alanmg.me/crossyroad/">alanmg.me/crossyroad/</a>
+    <a href="https://alanmg.me/crossy-road/">alanmg.me/crossy-road/</a>
     <br />
     <br />
-    <a href="http://alanmg.me/">Más sobre mi</a>
+    <a href="https://www.alanfmorag.tech/">Más sobre mi</a>
   </p>
 </p>
 
